@@ -1,0 +1,40 @@
+﻿Register 3 (LED)
+10 = LED 1 & 3
+20 = LED 2
+5 = LED 0
+0 = keins leuchtet
+25 = LED 0 & 3
+30 = LED 1& 2 & 3
+35 = LED 0&1
+40 = LED 3
+
+Functions:
+=========
+command     short  parameter           function
+-------     -----  ---------           --------
+help                                   show this help
+request            {sequence}          begin decimal request, sequence number is optional
+            $      {
+sequence}          begin hexadecimal request, sequence number is optional
+ set        !      {register},{value}  set register with value
+ get        ?      {register}          get register data once
+ report     #      {register}          report register data always
+ unreport   ~      {register}          don't report register data
+
+Registers:
+=========
+ 0: BOT ID
+ 1: Version
+ 2: Supply Voltage [mV]
+ 3: LEDs
+ 4: Sensors
+ 6: Motor Mode 
+ 7: Motor PWM L 
+ 8: Motor PWM R 
+ 9: Motor PID L 
+10: Motor PID R 
+13: Odometry L 
+14: Odometry R 
+16: Line C
+17: Line L
+18: Line R
